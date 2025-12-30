@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jallikattu Token System | Login</title>
+    <!-- Google Fonts for Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Jallikattu Token</h1>
+                <p>Secure Vaadivaasal Entry System</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter user name" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login to System</button>
+                <div style="margin-top: 15px; text-align: center;">
+                    <button type="button" id="useDefaultBtn"
+                        style="background:none; border:none; color: #777; font-size: 0.85rem; cursor: pointer; text-decoration: underline;">Use
+                        Default (admin / 123)</button>
+                </div>
+            </form>
+            <div class="login-footer">
+                <p>2026 Edition</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

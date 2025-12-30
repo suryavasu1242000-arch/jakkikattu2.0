@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jallikattu Token | Check Status</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h2 class="logo">Jallikattu<span>Online</span></h2>
+            <div style="display: flex; gap: 10px;">
+                <a href="apply.html" class="btn-outline"
+                    style="text-decoration: none; color: white; border-color: white;">Apply New</a>
+                <a href="index.html" class="btn-outline"
+                    style="text-decoration: none; color: white; border-color: white;">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content" style="max-width: 600px; margin-top: 40px;">
+        <div class="card">
+            <div class="card-header">
+                <h3>Check Application Status</h3>
+                <p style="color: #666; margin-top: 5px;">Enter your registered mobile number to check status.</p>
+            </div>
+
+            <form id="statusForm" style="margin-top: 20px;">
+                <div class="input-group">
+                    <label for="searchMobile">Mobile Number</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="tel" id="searchMobile" required placeholder="Enter 10-digit Mobile Number"
+                            style="flex:1;">
+                        <button type="submit" class="btn-primary" style="width: auto; margin-top:0;">Check</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="statusResult" style="margin-top: 30px; display: none;">
+                <!-- Result content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Printable Area for Download -->
+    <div id="downloadCard"
+        style="display:none; background: white; padding: 20px; border: 2px solid #FBC02D; border-radius: 10px; width: 350px; text-align: center; margin: 0 auto;">
+        <h2 style="color: #B71C1C; margin: 0;">JALLIKATTU 2026</h2>
+        <p style="margin: 5px 0; color: #555;">Official Entry Token</p>
+        <hr style="border: 1px dashed #ccc; margin: 10px 0;">
+
+        <img id="cardBullPhoto" src=""
+            style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #FBC02D;">
+
+        <h1 id="cardToken" style="font-size: 3rem; color: #2E7D32; margin: 10px 0;">000</h1>
+
+        <h3 id="cardBullName" style="margin: 5px 0;">Bull Name</h3>
+        <p id="cardOwnerName" style="margin: 0; color: #666;">Owner Name</p>
+        <p id="cardPlace" style="margin: 0; color: #888; font-size: 0.9rem;">Place</p>
+
+        <div id="cardQrCode" style="margin-top: 15px; display: flex; justify-content: center;"></div>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #aaa;">Scan to Verify</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/status.js"></script>
+</body>
+
+</html>

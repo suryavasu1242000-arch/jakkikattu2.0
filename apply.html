@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jallikattu Token | Online Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h2 class="logo">Jallikattu<span>Online</span></h2>
+            <div style="display: flex; gap: 10px;">
+                <a href="status.html" class="btn-outline"
+                    style="text-decoration: none; color: white; border-color: white;">Check Status</a>
+                <a href="index.html" class="btn-outline"
+                    style="text-decoration: none; color: white; border-color: white;">Admin Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content" style="max-width: 600px; margin-top: 40px;">
+
+        <!-- Status Link Card -->
+        <div class="card" style="margin-bottom: 25px; border: 2px solid #2E7D32; background: #e8f5e9;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3 style="color: #2E7D32; margin-bottom: 5px;">Already Registered?</h3>
+                    <p style="margin: 0; color: #555;">Check approval status & Download Token Card</p>
+                </div>
+                <a href="status.html" class="btn-primary"
+                    style="text-decoration: none; width: auto; background-color: #2E7D32;">Check Status</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Participant Registration Form</h3>
+                <p style="color: #666; margin-top: 5px;">Fill your details to apply for a token.</p>
+            </div>
+
+            <form id="applyForm">
+                <div class="form-grid" style="grid-template-columns: 1fr;">
+
+                    <div class="input-group">
+                        <label for="bullName">Bull Name (Kaalai)</label>
+                        <input type="text" id="bullName" required placeholder="Enter Bull Name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ownerName">Owner Name</label>
+                        <input type="text" id="ownerName" required placeholder="Enter Owner Name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input type="tel" id="mobileNumber" required placeholder="Contact Number">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="place">Place / Village</label>
+                        <input type="text" id="place" required placeholder="Native Place">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="bullPhoto">Bull Photo</label>
+                        <input type="file" id="bullPhoto" accept="image/*" required>
+                        <p class="hint">Clear photo of the bull (Max 2MB)</p>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-primary" style="margin-top: 20px;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/apply.js"></script>
+</body>
+
+</html>
